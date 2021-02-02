@@ -37,14 +37,12 @@ namespace cipher
         {
             Console.Write("string: ");
             string inputString = Console.ReadLine();
-            int key = 1;
-            for (int i = 0; i <= 26; ++i)
+            for (int i = 1; i <= 26; ++i)
             {
                 // string cipherText = doEncrypt(inputString, key);
                 // Console.WriteLine(cipherText);
-                string text = doDecrypt(inputString, key);
-                Console.WriteLine($"{text} Key: {key}");
-                ++key;
+                string text = doDecrypt(inputString, i);
+                Console.WriteLine($"{text} Key: {i}");
             }
         }
     }
