@@ -35,15 +35,21 @@ namespace cipher
 
         static void Main(string[] args)
         {
-            Console.Write("string: ");
+            Console.Write("Brute Force to decrypt: ");
             string inputString = Console.ReadLine();
             for (int i = 1; i <= 26; ++i)
             {
-                // string cipherText = doEncrypt(inputString, key);
-                // Console.WriteLine(cipherText);
                 string text = doDecrypt(inputString, i);
                 Console.WriteLine($"{text} Key: {i}");
             }
+
+            Console.WriteLine("-------------------////////-----------------------");
+
+            Console.Write($"Input Key: ");
+            int key = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Do encrypt: ");
+            string result = doEncrypt(inputString, key);
+            Console.WriteLine($"Encrypt result: {result}");
         }
     }
 }
